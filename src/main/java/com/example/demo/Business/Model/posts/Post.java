@@ -35,7 +35,6 @@ public class Post implements Serializable {
     @JoinColumn(name = "user_id")
     private User user;
 
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;

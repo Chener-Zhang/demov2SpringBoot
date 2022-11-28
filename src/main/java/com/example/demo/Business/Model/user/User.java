@@ -1,5 +1,7 @@
 package com.example.demo.Business.Model.user;
 
+import com.example.demo.Business.Model.audit.Audit;
+import com.example.demo.Business.Model.audit.UserDateAudit;
 import com.example.demo.Business.Model.posts.Comment;
 import com.example.demo.Business.Model.posts.Post;
 import com.example.demo.Business.Model.role.Role;
@@ -17,7 +19,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @Table(name = "users")
-public class User implements Serializable {
+public class User extends UserDateAudit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
